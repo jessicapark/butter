@@ -225,7 +225,7 @@ Full-Width Styles
 }
 #sec-join ul li {
   margin: 0;
-  /*display: -moz-inline-stack;*/
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   zoom: 1;
@@ -264,15 +264,16 @@ Full-Width Styles
   width: 740px;
   height: 300px;
   margin: 40px auto;
-
+  position: relative;
 }
 .join-content{
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  opacity: 0;
   width: 100%;
   height: 300px;
-}
-.join-wrap .active{
-  display: block;
 }
 .join-content-left{
   width: 350px;

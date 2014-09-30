@@ -14,15 +14,28 @@ $(document).ready(function () {
 		adjustWindow();
 	});
 
-	// $( "#sec-join ul a" ).click(function() {
-	// 	if(!$(this).hasClass('active')){
-	// 		$('.join-wrap .active').animate({"marginLeft":"-20x","opacity":"0"),1000}
-	//         $('.join-wrap .active').hide();
-	//         $('.join-wrap div').removeClass('active');
-	//         $('#sec-join ul a').removeClass('active');
-	//         $(this).addClass('active');
- //    	}
-	// });
+	$('.join-wrap .active').css({"opacity":"1","marginTop":"0px"});
+	$( "#sec-join ul a" ).click(function() {
+		if(!$(this).hasClass('active')){
+			$('.join-wrap .active').animate({"marginTop":"20px","opacity":"0"},500);
+	        $('.join-wrap div').removeClass('active');
+	        $('#sec-join ul a').removeClass('active');
+	        $(this).addClass('active');
+	        if ($(this).hasClass('job1')) {
+	        	$('.join-wrap .job1').addClass('active');
+	        	$('.join-wrap .job1').delay(300).animate({"marginTop":"0px","opacity":"1"},500);
+	        }else if ($(this).hasClass('job2')) {
+	        	$('.join-wrap .job2').addClass('active');
+	        	$('.join-wrap .job2').delay(300).animate({"marginTop":"0px","opacity":"1"},500);
+	        }else if ($(this).hasClass('job3')) {
+	        	$('.join-wrap .job3').addClass('active');
+	        	$('.join-wrap .job3').delay(300).animate({"marginTop":"0px","opacity":"1"},500);
+	        }else if ($(this).hasClass('job4')) {
+	        	$('.join-wrap .job4').addClass('active');
+	        	$('.join-wrap .job4').delay(300).animate({"marginTop":"0px","opacity":"1"},500);
+	        };
+    	}
+	});
 
 });
 
