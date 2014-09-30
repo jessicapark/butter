@@ -7,73 +7,64 @@
     <meta name="description" content="Butter : ">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="javascripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="javascripts/main.js"></script>
     <title>Butter</title>
   </head>
 
   <body>
+    <div id="warpper">
+      <div id="warpperInner">
+        <div id="sec1" class="section full">
+          <img class="sec1-bg" src="images/sec1-bg.png">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/jessicapark/butter">View on GitHub</a>
-
-          <h1 id="project_title">Butter</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/jessicapark/butter/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/jessicapark/butter/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+          <div class="scroll-down">
+             <div class="fa fa-long-arrow-down"><img src="images/scrolldown.png" width="9px" height="55px"></div>
+             <div class="eng-bold">下滑了解更多</div>
+          </div>
+        </div>
+        <div id="sec-join" class="section full">
+          <div class="sec-title"><img src="images/join-title.png" width="156px" height="28px"></div>
+          <ul>
+              <a href="" class="active"><li>高级后端工程师</li></a>
+              <a href=""><li><span>iOS</span>高级研发工程师</li></a>
+              <a href=""><li>市场推广</li></a>
+              <a href=""><li>社区运营经理</li></a>
+          </ul>
+          <div class="join-content">
+            <div class="join-content-left">
+              <div class="join-content-title"><img src="images/gwzz.png" width="61px" height="15px"></div>
+              <div class="join-content-con">
+                <p>1. 与产品经理及业务人员配合，完成需求设计、技术方案选型并最终实现</p>
+                <p>2. 不断优化升级现有平台架构和设计方案，全方位提高后端系统的稳定性和性能</p>
+                <p>3. 定期 review 后端工程师的工作成果，并能指导工程师不断成长</p>
+              </div>
+            </div>
+            <div class="join-content-right">
+              <div class="join-content-title"><img src="images/zwyq.png" width="62px" height="15px"></div>
+              <div class="join-content-con">
+                <p>1. 计算机或相关专业本科或硕士毕业，习惯阅读英文 manual</p>
+                <p>2. 2年以上大型互联网平台工作经历，技术选型，架构升级等工作有可见成果</p>
+                <p>3. 熟练使用 PHP/Python/Ruby 或者任何一门脚本语言</p>
+                <p>4. 熟练使用 Mysql 数据库并有实际调优经验</p>
+                <p>5. 对以下名词熟悉的候选人优先考虑：Beanstalk, Scribe, Twemproxy, Yaf</p>
+                <p>6. google 使用者优先，github 与 stackoverflow 贡献者优先，乐于分享者优先，对开源社区有输出者优先</p>
+              </div>
+            </div>
+          </div>
+          <div class="join-email">简历投这里·angelo_siri@foxmail.com·</div>
+        </div>
+      </div>
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
+    <div id="nav">
+      <ul>
+          <li class="showContact"><a href="" class="active">首页</a></li>
+          <li class="showAbout"><a href="">申请内测</a></li>
+          <li class="showPhilosophy"><a href="">联系我们</a></li>
+          <li class="showPhilosophy"><a href="">加入Butter!</a></li>
+      </ul>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Butter maintained by <a href="https://github.com/jessicapark">jessicapark</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
+    <div id="borderBottom"></div>
   </body>
 </html>
