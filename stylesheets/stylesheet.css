@@ -195,6 +195,23 @@ Full-Width Styles
 #sec1 img.sec1-bg{
   position: relative;
 }
+#sec1 .sec1-repeat{
+  width: 100%;
+  height: 100%;
+  position: absolute; 
+  top:0; 
+  left:0; 
+  background: url('../images/sec1-repeat.png') repeat;
+}
+#sec1 .sec1-repeat .sec1-title{
+  width: 383px;
+  height: 139px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -191px;
+  margin-top: -70px;
+}
 #sec-join{
   background: url('../images/join-bg-repeat.png') repeat;
 }
@@ -243,10 +260,19 @@ Full-Width Styles
 #sec-join ul a:hover{
   border: 1px #edd976 solid;
 }
-.join-content{
+.join-wrap{
   width: 740px;
   height: 300px;
   margin: 40px auto;
+
+}
+.join-content{
+  display: none;
+  width: 100%;
+  height: 300px;
+}
+.join-wrap .active{
+  display: block;
 }
 .join-content-left{
   width: 350px;

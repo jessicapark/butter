@@ -14,6 +14,15 @@ $(document).ready(function () {
 		adjustWindow();
 	});
 
+	// $( "#sec-join ul a" ).click(function() {
+	// 	if(!$(this).hasClass('active')){
+	// 		$('.join-wrap .active').animate({"marginLeft":"-20x","opacity":"0"),1000}
+	//         $('.join-wrap .active').hide();
+	//         $('.join-wrap div').removeClass('active');
+	//         $('#sec-join ul a').removeClass('active');
+	//         $(this).addClass('active');
+ //    	}
+	// });
 
 });
 
