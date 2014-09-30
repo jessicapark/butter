@@ -37,7 +37,6 @@ function adjustWindow(){
 		$('.sec1-bg').height("auto");
 		$('.sec1-bg').width("100%");
 		$('.sec1-bg').css({left: '0'});
-		$('.sec1-bg').css({marginLeft: '0'});
-
+		// $('.sec1-bg').css({marginLeft: '0'});
 	};
 }
