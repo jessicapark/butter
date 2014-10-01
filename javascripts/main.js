@@ -14,6 +14,8 @@ $(document).ready(function () {
 		adjustWindow();
 	});
 
+	var t;
+
 	$(window).scroll(function() {
 		var wrapperInnerH = $(window).height() - 2*borderMargin;
 		var s = $(window).scrollTop();
@@ -36,6 +38,17 @@ $(document).ready(function () {
 			$('#func3 .iphone').css({top: '0px'});
 			$('#func4 .iphone').css({top: '0px'});
 	    };
+	 //    clearTimeout(t);
+		// t = setTimeout(function(){
+		// 	if ((s-wrapperInnerH) <= 20 && (s-wrapperInnerH) >= -20) {
+	 //    		$("html,body").animate({scrollTop:wrapperInnerH},1000);
+	 //    	}else if ((s-5*wrapperInnerH) <= 20 && (s-5*wrapperInnerH) >= -20) {
+	 //    		$("html,body").animate({scrollTop:5*wrapperInnerH},1000);
+	 //    	}else if ((s-6*wrapperInnerH) <= 0 && (s-6*wrapperInnerH) >= -50) {
+	 //    		$("html,body").animate({scrollTop:6*wrapperInnerH},1000);
+	 //    	};
+		// },200);
+
 	});
 
 	$('.join-wrap .active').css({"opacity":"1","marginTop":"0px"});

@@ -204,13 +204,13 @@ Full-Width Styles
   background: url('../images/sec1-repeat.png') repeat;
 }
 #sec1 .sec1-repeat .sec1-title{
-  width: 383px;
-  height: 139px;
+  width: 380px;
+  height: 187px;
   left: 50%;
   top: 50%;
   position: absolute;
-  margin-left: -191px;
-  margin-top: -70px;
+  margin-left: -190px;
+  margin-top: -94px;
 }
 #sec-join{
   background:#fff url('../images/join-bg-repeat.png') repeat;
@@ -361,6 +361,10 @@ Full-Width Styles
   left: 50%;
   margin-left: 150px;
   top: 50%;
+}
+
+.leftContent p {
+  margin-bottom: 0px;
 }
 
 /******** apply ********/
