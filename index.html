@@ -74,6 +74,16 @@
             <div class="rightContent show"></div>
           </div>
         </div>
+        <div id="sec-apply" class="section full">
+          <div id="sec-apply-left"><img src="images/apply.png" width="387px" height="193px"></div>
+          <div id="sec-apply-right">
+            <div class="apply-field">
+                  <input type="text" value="" name="email" id="address" placeholder="请输入邮箱地址">
+                  <button class="button">申请内测</button>
+            </div>
+          </div>
+          <div id="sec-apply-arrow"><img src="images/apply-arrow.png" width="55px" height="9px"></div>
+        </div>
         <div id="sec-join" class="section full">
           <div class="sec-title"><img src="images/join-title.png" width="156px" height="28px"></div>
           <ul>
@@ -172,10 +182,11 @@
 
     <div id="nav">
       <ul>
-          <li class="showContact"><a href="" class="active">首页</a></li>
-          <li class="showAbout"><a href="">申请内测</a></li>
-          <li class="showPhilosophy"><a href="">联系我们</a></li>
-          <li class="showPhilosophy"><a href="">加入Butter!</a></li>
+          <li><a onclick="scrollTop()" class="active">首页</a></li>
+          <li><a onclick="scrollWhatis()">Butter 能做什么?</a></li>
+          <li><a onclick="scrollApply()">申请内测</a></li>
+          <li><a onclick="scrollApply()">联系我们</a></li>
+          <li><a onclick="scrollJoin()">加入 Butter!</a></li>
       </ul>
     </div>
 

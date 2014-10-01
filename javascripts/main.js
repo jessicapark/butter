@@ -87,3 +87,21 @@ function adjustWindow(){
 	$('.sec1-bg').css({top: '50%'});
 	$('.sec1-bg').css({marginTop: - bgH/2 +'px'});
 }
+
+function scrollTop(){
+      var tt=$('#sec1').offset().top;
+      $("html,body").animate({scrollTop:tt-borderMargin},1000);
+}
+function scrollWhatis(){
+     var tt=$('#func1').offset().top;
+      $("html,body").animate({scrollTop:tt-borderMargin},1000);
+}
+
+function scrollApply(){
+      var tt=$('#sec-apply').offset().top;
+      $("html,body").animate({scrollTop:tt-borderMargin},1000);
+}
+function scrollJoin(){
+      var tt=$('#sec-join').offset().top;
+      $("html,body").animate({scrollTop:tt-borderMargin},1000);
+}

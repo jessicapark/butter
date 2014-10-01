@@ -362,3 +362,70 @@ Full-Width Styles
   margin-left: 150px;
   top: 50%;
 }
+
+/******** apply ********/
+
+
+#sec-apply-left{
+  background:#fff url('../images/sec2-repeat.png') repeat;
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+#sec-apply-left img{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -193px;
+  margin-top: -96px;
+}
+#sec-apply-right {
+  background:#f2f2f2 url('../images/sec4-repeat.png') repeat;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+#sec-apply-arrow{
+  width: 55px;
+  height: 9px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -27px;
+  margin-top: -5px;
+}
+#sec-apply-right .apply-field{
+  width: 292px;
+  height: 90px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -146px;
+  margin-top: -45px;
+}
+#sec-apply-right input {
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+  padding: 5px 20px;
+  height: 30px;
+  width: 250px;
+  background: #fff;
+  border: 1px solid #edd976;
+  -webkit-transition: width 0.25s ease-in-out;
+  -moz-transition: width 0.25s ease-in-out;
+  -o-transition: width 0.25s ease-in-out; 
+}
+#sec-apply-right button {
+  color: #767676;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 10px;
+  text-align: center;
+  height: 40px;
+  width: 292px;
+  line-height: 30px;
+  background: #fdf187;
+  border: 1px solid #edd976;
+}
