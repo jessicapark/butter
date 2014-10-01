@@ -14,6 +14,22 @@ $(document).ready(function () {
 		adjustWindow();
 	});
 
+	$(window).scroll(function() {
+		var wrapperInnerH = $(window).height() - 2*borderMargin;
+		var s = $(window).scrollTop();
+		// alert(wrapperInnerH);
+	    if (s >= wrapperInnerH) {
+	    	$('#func1 .iphone').css({top: s - wrapperInnerH +'px'});
+			$('#func2 .iphone').css({top: s - 2*wrapperInnerH +'px'});
+			$('#func3 .iphone').css({top: s - 3*wrapperInnerH +'px'});
+	        
+	    }else{
+	    	$('#func1 .iphone').css({top: '0px'});
+			$('#func2 .iphone').css({top: '0px'});
+			$('#func3 .iphone').css({top: '0px'});
+	    };
+	});
+
 	$('.join-wrap .active').css({"opacity":"1","marginTop":"0px"});
 	$( "#sec-join ul a" ).click(function() {
 		if(!$(this).hasClass('active')){
@@ -57,6 +73,9 @@ function adjustWindow(){
 		$('.sec1-bg').width("100%");
 	};
 	var bgW = $('.sec1-bg').width();
+	var bgH = $('.sec1-bg').height();
 	$('.sec1-bg').css({left: '50%'});
 	$('.sec1-bg').css({marginLeft: - bgW/2 +'px'});
+	$('.sec1-bg').css({top: '50%'});
+	$('.sec1-bg').css({marginTop: - bgH/2 +'px'});
 }

@@ -213,7 +213,7 @@ Full-Width Styles
   margin-top: -70px;
 }
 #sec-join{
-  background: url('../images/join-bg-repeat.png') repeat;
+  background:#fff url('../images/join-bg-repeat.png') repeat;
 }
 #sec-join .sec-title{
   width: 156px;
@@ -308,6 +308,43 @@ Full-Width Styles
 }
 
 
+/************** func ****************/
 
-
-
+.iphone img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 214px;
+  height: 439px;
+  margin-left: -107px;
+  margin-top: -220px;
+}
+.iphone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#func1 .iphone {
+  background:#fff url('../images/sec2-repeat.png') repeat;
+}
+#func2 .iphone {
+  background:#fdf187 url('../images/sec3-repeat.png') repeat;
+}
+.funcContent{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.leftContent{
+  position: absolute;
+  width: 300px;
+  text-align: right;
+  left: 50%;
+  margin-left: -450px;
+  top: 50%;
+}
+.funcTitle{
+  margin-bottom: 10px;
+}
