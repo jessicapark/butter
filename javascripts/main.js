@@ -22,11 +22,19 @@ $(document).ready(function () {
 	    	$('#func1 .iphone').css({top: s - wrapperInnerH +'px'});
 			$('#func2 .iphone').css({top: s - 2*wrapperInnerH +'px'});
 			$('#func3 .iphone').css({top: s - 3*wrapperInnerH +'px'});
-	        
+			$('#func3 .funcContent').css({top: s - 3*wrapperInnerH +'px'});
+			$('#func4 .iphone').css({top: s - 4*wrapperInnerH +'px'});	
+			$('#func4 .funcContent').css({top: s - 4*wrapperInnerH +'px'});        
+		    if (s >= 4*wrapperInnerH) {
+				$('#func4 .iphone').css({top: '0px'});
+				$('#func4 .funcContent').css({top: '0px'});        
+
+		    }
 	    }else{
 	    	$('#func1 .iphone').css({top: '0px'});
 			$('#func2 .iphone').css({top: '0px'});
 			$('#func3 .iphone').css({top: '0px'});
+			$('#func4 .iphone').css({top: '0px'});
 	    };
 	});
 
