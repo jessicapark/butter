@@ -19,7 +19,10 @@ margin-top: -325px;
 .iphone img {
  margin-top: -150px; 
 }
-#func3 .iphone, #func4 .iphone {
+#func4{
+  display: none;
+}
+#func3 .iphone{
   display: none;
 }
 .bf-aft {
@@ -33,7 +36,7 @@ left: 0;
   bottom: 0px;
   position: absolute;
 }
-#func3 .leftContent,#func4 .leftContent{
+#func3 .leftContent{
 top: 10%;
 margin-top: 0;
 }
@@ -47,10 +50,27 @@ float: none;
 }
 #map-content {
 width: 100%;
-height: 50%;
-top: 50%;
+height: 100%;
+top: 0%;
 left: 0;
 }
 .contact-info {
-margin-top: 20px;
+margin-top: 100px;
+}
+#sec-apply-left img {
+  position: relative;
+  left: 0;
+  top:0;
+  width: 80%;
+  height: auto;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+#sec-apply-right input {
+  font-size: 15px;
+height: 40px;
+}
+#sec-apply-right button {
+  font-size: 15px;
+height: 52px;
 }

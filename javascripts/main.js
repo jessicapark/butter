@@ -67,21 +67,6 @@ $(window).scroll(function() {
 		$('#func2').height("800px");
 		$('.bf-aft img').height("auto");
 		$('.bf-aft img').width("100%");
-		if (s >= wrapperInnerH) {
-			$('#func3 .funcContent').css({top: s - wrapperInnerH - 1600 +'px'});
-			$('#func3 .bf-aft').css({top: s - wrapperInnerH - 1600 +'px'});
-			$('#func4 .funcContent').css({top: s - 2*wrapperInnerH - 1600 +'px'});        
-		    $('#func4 .bf-aft').css({top: s - 2*wrapperInnerH - 1600 +'px'});          
-		    if (s >= 2*wrapperInnerH + 1600) {
-				$('#func4 .funcContent').css({top: '0px'});  
-				$('#func4 .bf-aft').css({top: '0px'});      
-		    }
-	    }else{
-	    	$('#func1 .iphone').css({top: '0px'});
-			$('#func2 .iphone').css({top: '0px'});
-			$('#func3 .iphone').css({top: '0px'});
-			$('#func4 .iphone').css({top: '0px'});
-	    };  
 	};
 
 	$('.join-wrap .active').css({"opacity":"1","marginTop":"0px"});
