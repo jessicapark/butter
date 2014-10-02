@@ -212,13 +212,31 @@ Full-Width Styles
   margin-left: -190px;
   margin-top: -94px;
 }
+.sec1-title-mask{
+  width: 0px;
+  height: 187px;
+  overflow: hidden;
+}
 #sec1 .sec1-scroll{
-  width: 50%;
+  width: 20%;
   height: 100%;
   position: absolute; 
   top:0; 
   left:0; 
   background: url('../images/sec1-repeat.png') repeat;
+}
+.sec1-scroll-line{
+  position: absolute; 
+  top:0; 
+  right:0; 
+  width: 1px;
+  height: 100%;
+  background: #fdf187;
+}
+.sec1-scroll-bar{
+  position: absolute; 
+  top:100px; 
+  right:-20px; 
 }
 #sec-join{
   background:#f2f2f2 url('../images/sec4-repeat.png') repeat;

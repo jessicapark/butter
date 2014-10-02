@@ -16,22 +16,29 @@ $(document).ready(function () {
 		adjustWindow();
 	});
 
+	// $body.bind('mousewheel', function(event,delta) {
+	// if(roll){
+	// 	scrollAll(key,-1*delta);
+ //    });
+
     var mouseControl = $('.sec1-scroll');
+    var mask = $('.sec1-title-mask');
     $('#sec1').bind('mouseover',function(e){
     	Mouse(e);
-    	// alert(mouseX);
 		mouseControl.css({ width: mouseX - borderMargin});
-    }).bind('mousemove',function(e){ //给对象创建mousemove事件
-		// Mouse(e);
-	}).bind('mouseout',function(){ //给对象创建mouseout事件
-		// tooltip.stopAll().fadeTo(500,0, function(){$(this).hide();});//隐藏效果
+		mask.css({ width: (mouseX - borderMargin) - ($('#sec1').width() - $('.sec1-title').width())/2 });
+    }).bind('mousemove',function(e){
+    	Mouse(e);
+		mouseControl.css({ width: mouseX - borderMargin});
+		mask.css({ width: (mouseX - borderMargin) - ($('#sec1').width() - $('.sec1-title').width())/2 });
+	}).bind('mouseout',function(){ 
+		// mouseControl.animate({ width:"100%"},500);
 	});
 
 });
 
 $(window).scroll(function() {
 
-		
 		var wrapperInnerH = $(window).height() - 2*borderMargin;
 		var s = $(window).scrollTop();
 		// alert(wrapperInnerH);
