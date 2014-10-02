@@ -165,3 +165,6 @@ width: 120px;
 .contact-info .contact-bg3 {
 width: 170px;
 }
+#map-canvas{
+  display: none;
+}
