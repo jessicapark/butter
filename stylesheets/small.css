@@ -1,0 +1,56 @@
+#warpper {
+margin: 40px;
+}
+#nav, #borderBottom {
+height: 40px;
+}
+.sec1-scroll{
+  display: none;
+}
+#nav ul {
+display: none;
+}
+.leftContent, .rightContent {
+width: 300px;
+text-align: center;
+margin-left: -145px;
+margin-top: -325px;
+}
+.iphone img {
+ margin-top: -150px; 
+}
+#func3 .iphone, #func4 .iphone {
+  display: none;
+}
+.bf-aft {
+width: 100%;
+left: 0;
+}
+.bf-aft-cover{
+  display: none;
+}
+.bf-aft img{
+  bottom: 0px;
+  position: absolute;
+}
+#func3 .leftContent,#func4 .leftContent{
+top: 10%;
+margin-top: 0;
+}
+#sec-apply-left, #sec-apply-right {
+width: 100%;
+height: 50%;
+float: none; 
+}
+#sec-apply-arrow{
+  display: none;
+}
+#map-content {
+width: 100%;
+height: 50%;
+top: 50%;
+left: 0;
+}
+.contact-info {
+margin-top: 20px;
+}

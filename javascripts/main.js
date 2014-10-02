@@ -1,4 +1,4 @@
-var borderMargin = 60;
+var borderMargin = parseInt($("#warpper").css("margin"));
 var roll=true;
 var mobile=false;
 var key=0;
@@ -39,8 +39,9 @@ $(document).ready(function () {
 
 $(window).scroll(function() {
 
-		var wrapperInnerH = $(window).height() - 2*borderMargin;
-		var s = $(window).scrollTop();
+	var wrapperInnerH = $(window).height() - 2*borderMargin;
+	var s = $(window).scrollTop();
+	if (mobile==false) {
 		// alert(wrapperInnerH);
 	    if (s >= wrapperInnerH) {
 	    	$('#func1 .iphone').css({top: s - wrapperInnerH +'px'});
@@ -54,7 +55,6 @@ $(window).scroll(function() {
 		    if (s >= 4*wrapperInnerH) {
 				$('#func4 .iphone').css({top: '0px'});
 				$('#func4 .funcContent').css({top: '0px'});        
-
 		    }
 	    }else{
 	    	$('#func1 .iphone').css({top: '0px'});
@@ -62,6 +62,27 @@ $(window).scroll(function() {
 			$('#func3 .iphone').css({top: '0px'});
 			$('#func4 .iphone').css({top: '0px'});
 	    };
+	}else{
+		$('#func1').height("800px");
+		$('#func2').height("800px");
+		$('.bf-aft img').height("auto");
+		$('.bf-aft img').width("100%");
+		if (s >= wrapperInnerH) {
+			$('#func3 .funcContent').css({top: s - wrapperInnerH - 1600 +'px'});
+			$('#func3 .bf-aft').css({top: s - wrapperInnerH - 1600 +'px'});
+			$('#func4 .funcContent').css({top: s - 2*wrapperInnerH - 1600 +'px'});        
+		    $('#func4 .bf-aft').css({top: s - 2*wrapperInnerH - 1600 +'px'});          
+		    if (s >= 2*wrapperInnerH + 1600) {
+				$('#func4 .funcContent').css({top: '0px'});  
+				$('#func4 .bf-aft').css({top: '0px'});      
+		    }
+	    }else{
+	    	$('#func1 .iphone').css({top: '0px'});
+			$('#func2 .iphone').css({top: '0px'});
+			$('#func3 .iphone').css({top: '0px'});
+			$('#func4 .iphone').css({top: '0px'});
+	    };  
+	};
 
 	$('.join-wrap .active').css({"opacity":"1","marginTop":"0px"});
 	$( "#sec-join ul a" ).click(function() {
@@ -101,7 +122,7 @@ function adjustWindow(){
 	winH = $(window).height();
 
 
-	if(winW<750&&winH>winW){mobile=true;}//判断手机条件
+	if(winW<1000&&winH>winW){mobile=true;}//判断手机条件
 
 
 	wrapperInnerH = winH-2*borderMargin;

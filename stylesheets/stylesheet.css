@@ -387,10 +387,10 @@ Full-Width Styles
 }
 .leftContent{
   position: absolute;
-  width: 300px;
+  width: 290px;
   text-align: right;
   left: 50%;
-  margin-left: -450px;
+  margin-left: -425px;
   top: 50%;
 }
 .funcTitle{
@@ -398,7 +398,7 @@ Full-Width Styles
 }
 .rightContent{
   position: absolute;
-  width: 300px;
+  width: 290px;
   text-align: left;
   left: 50%;
   margin-left: 150px;
