@@ -13,6 +13,7 @@ $(document).ready(function () {
 	adjustWindow();
 	$window.resize(function () {
 		adjustWindow();
+		
 	});
 
 	// $body.bind('mousewheel', function(event,delta) {
@@ -64,6 +65,7 @@ $(document).ready(function () {
 
 $(window).scroll(function() {
 
+	var borderMargin = parseInt($("#warpper").css("margin"));
 	var wrapperInnerH = $(window).height() - 2*borderMargin;
 	var s = $(window).scrollTop();
 	if (mobile==false) {
@@ -106,7 +108,7 @@ function adjustWindow(){
 	winH = $(window).height();
 
 
-	if(winW<1000&&winH>winW){mobile=true;}//判断手机条件
+	if(winW<1000){mobile=true;}else{mobile=false;}//判断手机条件
 
 
 	wrapperInnerH = winH-2*borderMargin;
