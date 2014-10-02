@@ -9,7 +9,6 @@ $(document).ready(function () {
 	$wrapper = $('#wrapper');
 	$wrapInner = $('#wrapperInner');
 
-
 	// get window dimensions
 	adjustWindow();
 	$window.resize(function () {
@@ -99,6 +98,7 @@ var Mouse = function(e) {
 // set image and window dimensions
 function adjustWindow(){
 
+	var borderMargin = parseInt($("#warpper").css("margin"));
 	// get window size
 	winW = $(window).width();
 	winH = $(window).height();

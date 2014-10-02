@@ -4,6 +4,9 @@ margin: 20px;
 #nav, #borderBottom {
 height: 20px;
 }
+.sec1-title-mask{
+  width: 380px;
+}
 .sec1-scroll{
   display: none;
 }
