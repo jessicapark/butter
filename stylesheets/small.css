@@ -1,8 +1,6 @@
-
 body {
   font-size: 15px;
 }
-
 #warpper {
 margin: 20px;
 }
@@ -10,10 +8,23 @@ margin: 20px;
 height: 20px;
 }
 .sec1-title-mask{
-  width: 380px;
+  width: 100%;
 }
 .sec1-scroll{
   display: none;
+}
+.sec1-title-mask img{
+  width: 80%;
+  height: auto;
+  left: 50%;
+  margin-left: -40%;
+  position: absolute;
+  margin-top: 10px;
+}
+#sec1 .sec1-repeat .sec1-title {
+  width: 80%;
+  height: auto;
+  margin-left: -40%;
 }
 #nav ul {
 display: none;
