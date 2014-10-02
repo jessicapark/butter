@@ -140,7 +140,7 @@ function scrollAll(dom,updown){
 		updown=0;
 	}
 	dom = parseInt(dom);
-	if(dom+updown>6||dom+updown<0){
+	if(dom+updown>7||dom+updown<0){
 		return;
 	}
 	roll = false;
@@ -166,6 +166,9 @@ function scrollAll(dom,updown){
 		  break;
 		case 6:
 		  obj=$('#sec-join');
+		break;
+		case 7:
+		  obj=$('#sec-contact');
 	}
 
 	$("html,body").animate({scrollTop:obj.offset().top-borderMargin},1000,function(){
@@ -173,3 +176,45 @@ function scrollAll(dom,updown){
 	});
 
 }
+
+
+      function initialize(){
+
+        // Create an array of styles.
+        var styles = [
+          {
+            stylers: [
+              { hue: "#fdf187" },
+              { saturation: 50 }
+            ]
+          },{
+            featureType: "road",
+            elementType: "geometry",
+            stylers: [
+              { lightness: 100 },
+              { saturation: 0 },
+              { visibility: "simplified" }
+            ]
+          },{
+            featureType: "road",
+            elementType: "labels",
+            stylers: [
+              { visibility: "off" }
+            ]
+          }
+        ];
+    
+      var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
+      
+        var myLatlng = new google.maps.LatLng(39.9233128,116.518472);
+          var myOptions = {
+              zoom: 17,
+              center: myLatlng,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+          }
+          var map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+
+      map.mapTypes.set('map_style', styledMap);
+      map.setMapTypeId('map_style');
+
+      }

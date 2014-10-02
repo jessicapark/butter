@@ -66,7 +66,7 @@ a {
 }
 
 a:hover, a:focus {
-  border-bottom: 1px #edd976 solid;
+  border-bottom: 1px #ebd152 solid;
 }
 
 p{
@@ -426,7 +426,7 @@ Full-Width Styles
 }
 #sec-apply-right .apply-field{
   width: 292px;
-  height: 90px;
+  height: 92px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -434,26 +434,78 @@ Full-Width Styles
   margin-top: -45px;
 }
 #sec-apply-right input {
+  font-family: "athelas", Lora, "Times New Roman", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   text-align: center;
-  font-size: 14px;
   line-height: 30px;
   padding: 5px 20px;
   height: 30px;
   width: 250px;
   background: #fff;
+  color: #767676;
   border: 1px solid #edd976;
-  -webkit-transition: width 0.25s ease-in-out;
-  -moz-transition: width 0.25s ease-in-out;
-  -o-transition: width 0.25s ease-in-out; 
+  -webkit-transition: background 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out; 
+  outline: none;
+}
+#sec-apply-right input:hover{
+  background: #eee;
 }
 #sec-apply-right button {
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "athelas", Lora, "Times New Roman", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   color: #767676;
   -webkit-font-smoothing: antialiased;
   margin-top: 10px;
   text-align: center;
-  height: 40px;
+  height: 42px;
   width: 292px;
   line-height: 30px;
   background: #fdf187;
   border: 1px solid #edd976;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out; 
+  outline: none;
+}
+#sec-apply-right button:hover {
+  color: #ebd152;
+}
+
+
+#map-canvas{
+  position: absolute; 
+  top:0; 
+  left:0; 
+  width: 100%;
+  height: 100%;
+
+}
+#map-content{
+  width: 50%;
+  height: 100%;
+  position: absolute; 
+  top:0; 
+  left:50%; 
+  background: url('../images/sec6-repeat.png') repeat;
+}
+.contact-info{
+  margin-top: 200px;
+  width: 100%;
+  text-align: center;
+}
+.contact-info .contact-bg{
+  border: 1px solid #edd976;
+  padding: 2px;
+  background: #fff;
+  width: 350px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.contact-info .contact-bg2{
+  width: 120px;
+}
+.contact-info .contact-bg3{
+  width: 170px;
 }
