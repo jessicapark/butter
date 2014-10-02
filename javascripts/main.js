@@ -47,8 +47,10 @@ $(window).scroll(function() {
 			$('#func2 .iphone').css({top: s - 2*wrapperInnerH +'px'});
 			$('#func3 .iphone').css({top: s - 3*wrapperInnerH +'px'});
 			$('#func3 .funcContent').css({top: s - 3*wrapperInnerH +'px'});
+			$('#func3 .bf-aft').css({top: s - 3*wrapperInnerH +'px'});
 			$('#func4 .iphone').css({top: s - 4*wrapperInnerH +'px'});	
 			$('#func4 .funcContent').css({top: s - 4*wrapperInnerH +'px'});        
+		    $('#func4 .bf-aft').css({top: s - 4*wrapperInnerH +'px'});        
 		    if (s >= 4*wrapperInnerH) {
 				$('#func4 .iphone').css({top: '0px'});
 				$('#func4 .funcContent').css({top: '0px'});        
@@ -121,6 +123,13 @@ function adjustWindow(){
 	$('.sec1-bg').css({marginLeft: - bgW/2 +'px'});
 	$('.sec1-bg').css({top: '50%'});
 	$('.sec1-bg').css({marginTop: - bgH/2 +'px'});
+	if ( (wrapperInnerW/2)/wrapperInnerH <1.156) {
+		$('.bf-aft img').height("100%");
+		$('.bf-aft img').width("auto");
+	}else{
+		$('.bf-aft img').height("auto");
+		$('.bf-aft img').width("100%");
+	};
 }
 
 function scrollAll(dom,updown){

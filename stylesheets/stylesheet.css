@@ -221,7 +221,7 @@ Full-Width Styles
   background: url('../images/sec1-repeat.png') repeat;
 }
 #sec-join{
-  background:#fff url('../images/join-bg-repeat.png') repeat;
+  background:#f2f2f2 url('../images/sec4-repeat.png') repeat;
 }
 #sec-join .sec-title{
   width: 156px;
@@ -264,6 +264,7 @@ Full-Width Styles
 }
 #sec-join ul a:hover li{
   border: 1px #edd976 solid;
+  background-color: #fff;
 }
 #sec-join ul a:hover{
   border: 1px #edd976 solid;
@@ -318,6 +319,21 @@ Full-Width Styles
 
 /************** func ****************/
 
+.bf-aft{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+}
+.bf-aft-cover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/sec5-repeat.png') repeat;
+}
 .iphone img{
   position: absolute;
   top: 50%;
@@ -340,10 +356,10 @@ Full-Width Styles
 #func2 .iphone {
   background:#fdf187 url('../images/sec3-repeat.png') repeat;
 }
-#func3 .iphone {
+#func3 .funcContent{
   background:#fff url('../images/sec2-repeat.png') repeat;
 }
-#func4 .iphone {
+#func4 .funcContent{
   background:#fff url('../images/sec2-repeat.png') repeat;
 }
 .funcContent{
