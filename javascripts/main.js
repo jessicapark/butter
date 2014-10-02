@@ -16,12 +16,6 @@ $(document).ready(function () {
 		adjustWindow();
 	});
 
-	var t;
-	$body.bind('mousewheel', function(event,delta) {
-	if(roll){
-		scrollAll(key,-1*delta);
-    }
-
     var mouseControl = $('.sec1-scroll');
     $('#sec1').bind('mouseover',function(e){
     	Mouse(e);
@@ -37,7 +31,6 @@ $(document).ready(function () {
 
 $(window).scroll(function() {
 
-// if(mobile){ //让滚动条监听只对手机端有效
 		
 		var wrapperInnerH = $(window).height() - 2*borderMargin;
 		var s = $(window).scrollTop();
@@ -62,8 +55,6 @@ $(window).scroll(function() {
 			$('#func3 .iphone').css({top: '0px'});
 			$('#func4 .iphone').css({top: '0px'});
 	    };
-// }
-	});
 
 	$('.join-wrap .active').css({"opacity":"1","marginTop":"0px"});
 	$( "#sec-join ul a" ).click(function() {
@@ -177,6 +168,7 @@ function scrollAll(dom,updown){
 
 }
 
+// GOOGLE MAP
 
       function initialize(){
 
