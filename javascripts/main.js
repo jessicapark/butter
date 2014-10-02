@@ -65,6 +65,7 @@ $(window).scroll(function() {
 	}else{
 		$('#func1').height("800px");
 		$('#func2').height("800px");
+		$('#sec-join').height("800px");
 		$('.bf-aft img').height("auto");
 		$('.bf-aft img').width("100%");
 	};

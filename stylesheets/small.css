@@ -74,3 +74,32 @@ height: 40px;
   font-size: 15px;
 height: 52px;
 }
+#sec-join {
+background: #fff url('../images/sec2-repeat.png') repeat;
+}
+.join-content-right, .join-content-left{
+  float: none;
+}
+.join-content div div {
+float: none;
+}
+.join-content-con {
+width: 100%;
+}
+.join-content-left, .join-content-right {
+width: 100%;
+float: none;position: relative;
+}
+.join-wrap {
+width: 80%;
+height: auto;
+}
+.join-content {
+position: relative;
+width: 100%;
+height: auto;
+clear: both;
+}
+ .join-content-right {
+  margin-top: 30px;
+}
