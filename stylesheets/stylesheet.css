@@ -212,6 +212,14 @@ Full-Width Styles
   margin-left: -190px;
   margin-top: -94px;
 }
+#sec1 .sec1-scroll{
+  width: 50%;
+  height: 100%;
+  position: absolute; 
+  top:0; 
+  left:0; 
+  background: url('../images/sec1-repeat.png') repeat;
+}
 #sec-join{
   background:#fff url('../images/join-bg-repeat.png') repeat;
 }

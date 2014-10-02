@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript" src="javascripts/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="javascripts/main.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.mousewheel.min.js"></script>
     <title>Butter</title>
   </head>
 
@@ -22,6 +22,7 @@
           <div class="sec1-repeat">
             <img class="sec1-title" src="images/sec1-title.png">
           </div>
+          <!-- <div class="sec1-scroll"></div> -->
           <div class="scroll-down">
              <div class="fa fa-long-arrow-down"><img src="images/scrolldown.png" width="9px" height="55px"></div>
              <div class="eng-bold">下滑了解更多</div>
@@ -56,7 +57,7 @@
             <div class="leftContent">
                 <div class="funcTitle"><img src="images/func3-title.png" width="190px" height="23px"></div>
                 <p>
-                你可以在应用内创造自己的模板，</p>
+                你可以在应用内创造自己的模板，也可以直接利用其他用户创造的优质模板，仅修改文字内容即可生成一张图文照片。</p>
             </div>
             <div class="rightContent show"></div>
           </div>
@@ -67,9 +68,7 @@
             <div class="leftContent">
                 <div class="funcTitle"><img src="images/func3-title.png" width="190px" height="23px"></div>
                 <p>
-                你可以在应用内创造自己的模板，</p>
-                <p>也可以直接利用其他用户创造的优质模板，</p>
-                <p>仅修改文字内容即可生成一张图文照片。 
+                你可以在应用内创造自己的模板，也可以直接利用其他用户创造的优质模板，仅修改文字内容即可生成一张图文照片。 
                 </p>
             </div>
             <div class="rightContent show"></div>
@@ -183,15 +182,16 @@
 
     <div id="nav">
       <ul>
-          <li><a onclick="scrollTop()" class="active">首页</a></li>
-          <li><a onclick="scrollWhatis()">Butter 能做什么?</a></li>
-          <li><a onclick="scrollApply()">申请内测</a></li>
-          <li><a onclick="scrollApply()">联系我们</a></li>
-          <li><a onclick="scrollJoin()">加入 Butter!</a></li>
+          <li><a onclick="scrollAll('0');" class="active">首页</a></li>
+          <li><a onclick="scrollAll('1');">Butter 能做什么?</a></li>
+          <li><a onclick="scrollAll('5');">申请内测</a></li>
+          <li><a onclick="scrollAll('5');">联系我们</a></li>
+          <li><a onclick="scrollAll('6');">加入 Butter!</a></li>
       </ul>
     </div>
 
     <div id="borderBottom"></div>
 
+    <script type="text/javascript" src="javascripts/main.js"></script>
   </body>
 </html>

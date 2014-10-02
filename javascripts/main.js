@@ -1,5 +1,7 @@
 var borderMargin = 60;
-
+var roll=true;
+var mobile=false;
+var key=0;
 $(document).ready(function () {
 
 	$window = $(window);
@@ -15,8 +17,28 @@ $(document).ready(function () {
 	});
 
 	var t;
+	$body.bind('mousewheel', function(event,delta) {
+	if(roll){
+		scrollAll(key,-1*delta);
+    }
 
-	$(window).scroll(function() {
+    var mouseControl = $('.sec1-scroll');
+    $('#sec1').bind('mouseover',function(e){
+    	Mouse(e);
+    	// alert(mouseX);
+		mouseControl.css({ width: mouseX - borderMargin});
+    }).bind('mousemove',function(e){ //给对象创建mousemove事件
+		// Mouse(e);
+	}).bind('mouseout',function(){ //给对象创建mouseout事件
+		// tooltip.stopAll().fadeTo(500,0, function(){$(this).hide();});//隐藏效果
+	});
+
+});
+
+$(window).scroll(function() {
+
+// if(mobile){ //让滚动条监听只对手机端有效
+		
 		var wrapperInnerH = $(window).height() - 2*borderMargin;
 		var s = $(window).scrollTop();
 		// alert(wrapperInnerH);
@@ -38,17 +60,7 @@ $(document).ready(function () {
 			$('#func3 .iphone').css({top: '0px'});
 			$('#func4 .iphone').css({top: '0px'});
 	    };
-	 //    clearTimeout(t);
-		// t = setTimeout(function(){
-		// 	if ((s-wrapperInnerH) <= 20 && (s-wrapperInnerH) >= -20) {
-	 //    		$("html,body").animate({scrollTop:wrapperInnerH},1000);
-	 //    	}else if ((s-5*wrapperInnerH) <= 20 && (s-5*wrapperInnerH) >= -20) {
-	 //    		$("html,body").animate({scrollTop:5*wrapperInnerH},1000);
-	 //    	}else if ((s-6*wrapperInnerH) <= 0 && (s-6*wrapperInnerH) >= -50) {
-	 //    		$("html,body").animate({scrollTop:6*wrapperInnerH},1000);
-	 //    	};
-		// },200);
-
+// }
 	});
 
 	$('.join-wrap .active').css({"opacity":"1","marginTop":"0px"});
@@ -76,12 +88,22 @@ $(document).ready(function () {
 
 });
 
+//获取鼠标坐标函数
+var Mouse = function(e) {
+	mouseX = e.pageX
+}
+
 // set image and window dimensions
 function adjustWindow(){
 
 	// get window size
 	winW = $(window).width();
 	winH = $(window).height();
+
+
+	if(winW<750&&winH>winW){mobile=true;}//判断手机条件
+
+
 	wrapperInnerH = winH-2*borderMargin;
 	wrapperInnerW = winW-2*borderMargin;
 	$('.full').height(wrapperInnerH);
@@ -101,20 +123,44 @@ function adjustWindow(){
 	$('.sec1-bg').css({marginTop: - bgH/2 +'px'});
 }
 
-function scrollTop(){
-      var tt=$('#sec1').offset().top;
-      $("html,body").animate({scrollTop:tt-borderMargin},1000);
-}
-function scrollWhatis(){
-     var tt=$('#func1').offset().top;
-      $("html,body").animate({scrollTop:tt-borderMargin},1000);
-}
+function scrollAll(dom,updown){
+	if(!roll){
+		return;
+	}
+	if(updown==null){
+		updown=0;
+	}
+	dom = parseInt(dom);
+	if(dom+updown>6||dom+updown<0){
+		return;
+	}
+	roll = false;
+	key = dom+updown;
+	switch(key){
+		case 0:
+		  obj=$('#sec1');
+		  break;
+		case 1:
+		  obj=$('#func1');
+		  break;
+		case 2:
+		  obj=$('#func2');
+		  break;
+		case 3:
+		  obj=$('#func3');
+		  break;
+		case 4:
+		  obj=$('#func4');
+		  break;
+		case 5:
+		  obj=$('#sec-apply');
+		  break;
+		case 6:
+		  obj=$('#sec-join');
+	}
 
-function scrollApply(){
-      var tt=$('#sec-apply').offset().top;
-      $("html,body").animate({scrollTop:tt-borderMargin},1000);
-}
-function scrollJoin(){
-      var tt=$('#sec-join').offset().top;
-      $("html,body").animate({scrollTop:tt-borderMargin},1000);
+	$("html,body").animate({scrollTop:obj.offset().top-borderMargin},1000,function(){
+		roll=true;
+	});
+
 }
