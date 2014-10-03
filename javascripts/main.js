@@ -33,18 +33,24 @@ $(document).ready(function () {
 	    	Mouse(e);
 			mouseControl.css({ width: mouseX - borderMargin});
 			mask.css({ width: (mouseX - borderMargin) - ($('#sec1').width() - $('.sec1-title').width())/2 });
-		}
+			}
 	    }).bind('mousemove',function(e){
 	    	if (!mobile){
 	    	Mouse(e);
 			mouseControl.css({ width: mouseX - borderMargin});
 			mask.css({ width: (mouseX - borderMargin) - ($('#sec1').width() - $('.sec1-title').width())/2 });
-					}
+			}
 		}).bind('mouseleave',function(){ 
 			if (!mobile){
-			mouseControl.animate({ width:"100%"},500);
-			mask.animate({ width:"380px"},300);
-		}
+				scrollLeft = ($('#sec1').width() - $('.sec1-title').width())/2 - borderMargin;
+				// alert(scrollLeft);
+				if ( (mouseX - borderMargin) < scrollLeft ) {
+					mouseControl.animate({ width:"0%"},300);
+				}else{
+					mouseControl.animate({ width:"100%"},500);
+					mask.animate({ width:"380px"},300);
+				};
+			}
 		});
 
 	$('.join-wrap .active').css({"opacity":"1","marginTop":"0px"});
