@@ -2,6 +2,8 @@ var borderMargin = parseInt($("#warpper").css("margin"));
 var roll=true;
 var mobile=false;
 var key=0;
+
+	
 $(document).ready(function () {
 
 	$window = $(window);
@@ -13,7 +15,7 @@ $(document).ready(function () {
 	adjustWindow();
 	$window.resize(function () {
 		adjustWindow();
-		
+
 	});
 
 	// $body.bind('mousewheel', function(event,delta) {
@@ -21,22 +23,29 @@ $(document).ready(function () {
 	// 	scrollAll(key,-1*delta);
  //    });
 
-	if (mobile==false) {
+	if (!mobile) {
 	    var mouseControl = $('.sec1-scroll');
-	    var mask = $('.sec1-title-mask');
-	    $('#sec1').bind('mouseover',function(e){
-	    	Mouse(e);
-			mouseControl.css({ width: mouseX - borderMargin});
-			mask.css({ width: (mouseX - borderMargin) - ($('#sec1').width() - $('.sec1-title').width())/2 });
-	    }).bind('mousemove',function(e){
-	    	Mouse(e);
-			mouseControl.css({ width: mouseX - borderMargin});
-			mask.css({ width: (mouseX - borderMargin) - ($('#sec1').width() - $('.sec1-title').width())/2 });
-		}).bind('mouseout',function(){ 
-			// mouseControl.animate({ width:"100%"},500);
-		});
+	    var mask = $('.sec1-title-mask');  
 	};
 
+		$('#sec1').bind('mouseenter',function(e){
+			if (!mobile){
+	    	Mouse(e);
+			mouseControl.css({ width: mouseX - borderMargin});
+			mask.css({ width: (mouseX - borderMargin) - ($('#sec1').width() - $('.sec1-title').width())/2 });
+		}
+	    }).bind('mousemove',function(e){
+	    	if (!mobile){
+	    	Mouse(e);
+			mouseControl.css({ width: mouseX - borderMargin});
+			mask.css({ width: (mouseX - borderMargin) - ($('#sec1').width() - $('.sec1-title').width())/2 });
+					}
+		}).bind('mouseleave',function(){ 
+			if (!mobile){
+			mouseControl.animate({ width:"100%"},500);
+			mask.animate({ width:"380px"},300);
+		}
+		});
 
 	$('.join-wrap .active').css({"opacity":"1","marginTop":"0px"});
 	$( "#sec-join ul a" ).click(function() {
@@ -64,11 +73,10 @@ $(document).ready(function () {
 });
 
 $(window).scroll(function() {
-
 	var borderMargin = parseInt($("#warpper").css("margin"));
 	var wrapperInnerH = $(window).height() - 2*borderMargin;
 	var s = $(window).scrollTop();
-	if (mobile==false) {
+	if (!mobile) {
 		// alert(wrapperInnerH);
 	    if (s >= wrapperInnerH) {
 	    	$('#func1 .iphone').css({top: s - wrapperInnerH +'px'});
@@ -127,7 +135,9 @@ function adjustWindow(){
 	$('.sec1-bg').css({left: '50%'});
 	$('.sec1-bg').css({marginLeft: - bgW/2 +'px'});
 	$('.sec1-bg').css({top: '50%'});
-	$('.sec1-bg').css({marginTop: - bgH/2 +'px'});
+	$('.sec1-bg').css({marginTop: - bgH/2 +'px'}); 
+	// alert($('.sec1-bg').css("marginTop"));
+	// alert($('.sec1-bg').css("marginLeft"));
 	if ( (wrapperInnerW/2)/wrapperInnerH <1.156) {
 		$('.bf-aft img').height("100%");
 		$('.bf-aft img').width("auto");
@@ -192,11 +202,7 @@ function scrollAll(dom,updown){
 
 }
 
-// GOOGLE MAP
-
-      function initialize(){
-
-        // Create an array of styles.
+$(window).load(function (){ //在所有图片及js都加载后执行
         var styles = [
           {
             stylers: [
@@ -232,5 +238,4 @@ function scrollAll(dom,updown){
 
       map.mapTypes.set('map_style', styledMap);
       map.setMapTypeId('map_style');
-
-      }
+});
