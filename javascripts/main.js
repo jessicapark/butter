@@ -16,17 +16,14 @@ $(document).ready(function () {
 	adjustWindow();
 	$window.resize(function () {
 		adjustWindow();
-
 	});
 
 	if (mobile) {
-		
 		var mySwiper = new Swiper('.swiper-container',{
 	      pagination: '.pagination',
 	      loop:true,
 	      grabCursor: true
 	    })
-
 	};
 
 	// $body.bind('mousewheel', function(event,delta) {
