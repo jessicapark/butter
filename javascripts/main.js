@@ -95,11 +95,16 @@ $(window).scroll(function() {
 			$('#func4 .iphone').css({top: s - 4*wrapperInnerH +'px'});	
 			$('#func4 .funcContent').css({top: s - 4*wrapperInnerH +'px'});        
 		    $('#func4 .bf-aft').css({top: s - 4*wrapperInnerH +'px'});        
+	    }else if(s >= 4*wrapperInnerH && s < 5*wrapperInnerH){
+	    	$('#func3 .bf-aft').css({top: '0px'});
+	    	$('#func3 .iphone').css({top: '0px'});
+			$('#func3 .funcContent').css({top: '0px'});
+			$('#func4 .bf-aft').css({top: '0px'});
+			$('#func4 .iphone').css({top: '0px'});
+			$('#func4 .funcContent').css({top: '0px'}); 
 	    }else if (s >= 5*wrapperInnerH && s < 6*wrapperInnerH) {
-				$('#func4 .iphone').css({top: '0px'});
-				$('#func4 .funcContent').css({top: '0px'}); 
 	    		$('#nav ul li a').removeClass('active');
-	    		$('#nav ul li a.nav-apply').addClass('active');      
+	    		$('#nav ul li a.nav-apply').addClass('active'); 
 		}else if (s >= 6*wrapperInnerH && s < 7*wrapperInnerH) {
 				$('#nav ul li a').removeClass('active');
 	    		$('#nav ul li a.nav-join').addClass('active'); 
@@ -107,13 +112,14 @@ $(window).scroll(function() {
 				$('#nav ul li a').removeClass('active');
 	    		$('#nav ul li a.nav-contact').addClass('active'); 
 		}else{
-
 	    	$('#nav ul li a').removeClass('active');
 	    	$('#nav ul li a.nav-index').addClass('active');  
 	    	$('#func1 .iphone').css({top: '0px'});
 			$('#func2 .iphone').css({top: '0px'});
 			$('#func3 .iphone').css({top: '0px'});
+			$('#func3 .funcContent').css({top: '0px'});
 			$('#func4 .iphone').css({top: '0px'});
+			$('#func4 .funcContent').css({top: '0px'});
 	    };
 	};
 
