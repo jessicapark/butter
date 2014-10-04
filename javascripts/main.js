@@ -2,7 +2,7 @@ var borderMargin = parseInt($("#warpper").css("margin"));
 var roll=true;
 var mobile=false;
 var key=0;
-
+var temp=0;
 	
 $(document).ready(function () {
 
@@ -11,14 +11,13 @@ $(document).ready(function () {
 	$wrapper = $('#wrapper');
 	$wrapInner = $('#wrapperInner');
 
-
 	// get window dimensions
 	adjustWindow();
 	$window.resize(function () {
 		adjustWindow();
 	});
 
-	if (mobile) {
+	if (mobile&&temp==0) {
 		var mySwiper = new Swiper('.swiper-container',{
 	      pagination: '.pagination',
 	      loop:true,
