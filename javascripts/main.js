@@ -17,13 +17,6 @@ $(document).ready(function () {
 	$window.resize(function () {
 		adjustWindow();
 
-		if (mobile) {
-			var mySwiper = new Swiper('.swiper-container',{
-			    pagination: '.pagination',
-			    loop:true,
-			    grabCursor: true
-			})
-		};
 	});
 
 	if (mobile) {
