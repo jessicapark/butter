@@ -11,12 +11,30 @@ $(document).ready(function () {
 	$wrapper = $('#wrapper');
 	$wrapInner = $('#wrapperInner');
 
+
 	// get window dimensions
 	adjustWindow();
 	$window.resize(function () {
 		adjustWindow();
 
+		if (mobile) {
+			var mySwiper = new Swiper('.swiper-container',{
+			    pagination: '.pagination',
+			    loop:true,
+			    grabCursor: true
+			})
+		};
 	});
+
+	if (mobile) {
+		
+		var mySwiper = new Swiper('.swiper-container',{
+	      pagination: '.pagination',
+	      loop:true,
+	      grabCursor: true
+	    })
+
+	};
 
 	// $body.bind('mousewheel', function(event,delta) {
 	// if(roll){
@@ -177,7 +195,6 @@ function adjustWindow(){
 		$('.bf-aft img').height("auto");
 		$('.bf-aft img').width("100%");
 	};
-
 
 }
 
