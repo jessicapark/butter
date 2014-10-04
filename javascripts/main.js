@@ -2,10 +2,28 @@ var borderMargin = parseInt($("#warpper").css("margin"));
 var roll=true;
 var mobile=false;
 var key=0;
-var temp=0;
-	
+
+
+function animaloading(who,speed){
+	if(loading==true){//这是递归的结束条件，当loading==false的时候就不再调用了
+	    who.fadeOut(speed,function(){   //fadeIn(speed,callback);其中callback是在动画结束后要执行的一个函数。
+	        who.fadeIn(speed,function(){
+	            animaloading(who,speed);//这里用到了递归，当fadeOut动画结束后，执行再次调用自己本身。
+	        });
+	    });
+	}else{
+	    who.hide();//递归结束，隐藏
+	}
+}
+
+window.onload = function() { //这个是js本身的一个函数，它在整个页面DOM加载完成并且所有外部图片及元素都加载结束后执行，它与$(document).ready(){}的区别就是后者在DOM加载完成后就执行了，不考虑外部元素
+	loading=false; //当所有的外部图片等都加载结束后，把全局变量loading设为false，结束animaloading的动画递归。
+}; 
+
 $(document).ready(function () {
 
+    animaloading($('#loading'),1000);
+   
 	$window = $(window);
 	$body = $('body');
 	$wrapper = $('#wrapper');
@@ -17,7 +35,7 @@ $(document).ready(function () {
 		adjustWindow();
 	});
 
-	if (mobile&&temp==0) {
+	if (mobile) {
 		var mySwiper = new Swiper('.swiper-container',{
 	      pagination: '.pagination',
 	      loop:true,
