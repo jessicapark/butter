@@ -1,20 +1,21 @@
-body {
-  font-size: 15px;
-}
-#warpper {
-margin: 80px 20px 20px 20px;
-}
-#nav, #borderBottom {
-height: 20px;
-}
-#nav{
-  height: 80px;
-}
 .pic{
-  width: 100%;
-  height: auto;
+  width: 640px;
+  height: 640px;
+  margin: 0 auto;
 }
 .pic img{
   width: 100%;
   height: auto;
+}
+.pic-info{
+  width: 640px;
+  margin: 20px auto;
+}
+.pic-comment {
+  width: 640px;
+  margin: 20px auto;
+}
+#nav-logo {
+left: 50%;
+margin-left: -52px;
 }
