@@ -118,14 +118,14 @@ Full-Width Styles
 
 #nav-logo{
   position: absolute;
-  width: 176px;
-  height: 66px;
+  width: 88px;
+  height: 34px;
   top: 10px;
   left: 20px;
 }
 #nav-logo img{
-  width: 176px;
-  height: 66px;
+  width: 88px;
+  height: 34px;
 }
 #nav-dl-link{
   position: absolute;
