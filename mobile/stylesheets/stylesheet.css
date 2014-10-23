@@ -85,20 +85,6 @@ p{
 Full-Width Styles
 *******************************************************************************/
 
-#btn-dl{
-  bottom: 30px;
-  top: auto;
-  position: fixed;
-  width: 310px;
-  height: 95px;
-  left: 50%;
-  margin-left: -155px;
-}
-#btn-dl img{
-  width: 100%;
-  height: 100%;
-}
-
 #nav, #borderBottom {
 height: 20px;
 }
