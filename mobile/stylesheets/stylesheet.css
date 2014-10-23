@@ -129,14 +129,14 @@ Full-Width Styles
 }
 #nav-dl-link{
   position: absolute;
-  width: 192px;
-  height: 69px;
+  width: 96px;
+  height: 35px;
   top: 10px;
   right: 20px;
 }
 #nav-dl-link img{
-  width: 192px;
-  height: 69px;
+  width: 96px;
+  height: 35px;
 }
 #nav-avatar{
   width: 80px;
