@@ -118,39 +118,39 @@ Full-Width Styles
 
 #nav-logo{
   position: absolute;
-  width: 88px;
-  height: 34px;
-  top: 10px;
+  width: 117px;
+  height: 44px;
+  top: 15px;
   left: 20px;
 }
 #nav-logo img{
-  width: 88px;
-  height: 34px;
+  width: 117px;
+  height: 44px;
 }
 #nav-dl-link{
   position: absolute;
-  width: 96px;
-  height: 35px;
-  top: 10px;
+  width: 128px;
+  height: 46px;
+  top: 15px;
   right: 20px;
 }
 #nav-dl-link img{
-  width: 96px;
-  height: 35px;
+  width: 128px;
+  height: 46px;
 }
 #nav-avatar{
-  width: 80px;
-  height: 80px;
-  border-radius: 42px;
+  width: 70px;
+  height: 70px;
+  border-radius: 37px;
   overflow: hidden;
   position: absolute;
-  top: 60px;
+  top: 45px;
   left: 50%;
-  margin-left: -41px;
+  margin-left: -36px;
   border: 1px #fdf187 solid;
 }
 #nav-avatar img{
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
 }
 

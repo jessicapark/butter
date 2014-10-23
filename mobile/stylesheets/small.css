@@ -2,13 +2,13 @@ body {
   font-size: 15px;
 }
 #warpper {
-margin: 100px 20px 20px 20px;
+margin: 80px 20px 20px 20px;
 }
 #nav, #borderBottom {
 height: 20px;
 }
 #nav{
-  height: 100px;
+  height: 80px;
 }
 .pic{
   width: 100%;
