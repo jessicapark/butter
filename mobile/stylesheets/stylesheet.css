@@ -115,3 +115,42 @@ Full-Width Styles
   bottom: 0;
   top: auto;
 }
+
+#nav-logo{
+  position: absolute;
+  width: 88px;
+  height: 34px;
+  top: 10px;
+  left: 20px;
+}
+#nav-logo img{
+  width: 88px;
+  height: 34px;
+}
+#nav-dl-link{
+  position: absolute;
+  width: 96px;
+  height: 35px;
+  top: 10px;
+  right: 20px;
+}
+#nav-dl-link img{
+  width: 96px;
+  height: 35px;
+}
+#nav-avatar{
+  width: 80px;
+  height: 80px;
+  border-radius: 42px;
+  overflow: hidden;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  margin-left: -41px;
+  border: 1px #fdf187 solid;
+}
+#nav-avatar img{
+  width: 80px;
+  height: 80px;
+}
+
