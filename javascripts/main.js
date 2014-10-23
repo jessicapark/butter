@@ -3,27 +3,9 @@ var roll=true;
 var mobile=false;
 var key=0;
 
-
-function animaloading(who,speed){
-	if(loading==true){//这是递归的结束条件，当loading==false的时候就不再调用了
-	    who.fadeOut(speed,function(){   //fadeIn(speed,callback);其中callback是在动画结束后要执行的一个函数。
-	        who.fadeIn(speed,function(){
-	            animaloading(who,speed);//这里用到了递归，当fadeOut动画结束后，执行再次调用自己本身。
-	        });
-	    });
-	}else{
-	    who.hide();//递归结束，隐藏
-	}
-}
-
-window.onload = function() { //这个是js本身的一个函数，它在整个页面DOM加载完成并且所有外部图片及元素都加载结束后执行，它与$(document).ready(){}的区别就是后者在DOM加载完成后就执行了，不考虑外部元素
-	loading=false; //当所有的外部图片等都加载结束后，把全局变量loading设为false，结束animaloading的动画递归。
-}; 
-
+	
 $(document).ready(function () {
 
-    animaloading($('#loading'),1000);
-   
 	$window = $(window);
 	$body = $('body');
 	$wrapper = $('#wrapper');
@@ -33,6 +15,7 @@ $(document).ready(function () {
 	adjustWindow();
 	$window.resize(function () {
 		adjustWindow();
+
 	});
 
 	if (mobile) {
@@ -42,7 +25,35 @@ $(document).ready(function () {
 	      grabCursor: true
 	    })
 	};
+	
+$( ".button" ).click(function() {
+var email=$('#address').val();
+if(chkEmail(email)){
 
+ $.ajax({
+    type: "GET",
+    url: "php/submit.php",
+    dataType: "json",
+    mode: "block",
+    data: "email="+email,
+    timeout: 5000,
+    beforeSend: function() {
+ 		$('.button').text('正在提交').attr({"disabled":"disabled"});
+    },
+    success: function(data) {
+ 		$('.button').text('提交成功');
+    },
+    error: function() {
+    	alert('提交失败请重试。')
+    	$('.button').text('申请内测').removeAttr("disabled");
+    }
+  });
+
+}else{
+	alert('请输入正确的邮箱地址。')
+}
+
+});
 	// $body.bind('mousewheel', function(event,delta) {
 	// if(roll){
 	// 	scrollAll(key,-1*delta);
@@ -97,6 +108,9 @@ $(document).ready(function () {
 	        }else if ($(this).hasClass('job4')) {
 	        	$('.join-wrap .job4').addClass('active');
 	        	$('.join-wrap .job4').delay(300).animate({"marginTop":"0px","opacity":"1"},500);
+	        }else if ($(this).hasClass('job5')) {
+	        	$('.join-wrap .job5').addClass('active');
+	        	$('.join-wrap .job5').delay(300).animate({"marginTop":"0px","opacity":"1"},500);
 	        };
     	}
 	});
@@ -203,6 +217,7 @@ function adjustWindow(){
 		$('.bf-aft img').width("100%");
 	};
 
+
 }
 
 function scrollAll(dom,updown){
@@ -287,3 +302,11 @@ $(window).load(function (){ //在所有图片及js都加载后执行
       map.mapTypes.set('map_style', styledMap);
       map.setMapTypeId('map_style');
 });
+function chkEmail(strEmail) { 
+if (!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(strEmail)) { 
+return false; 
+} 
+else { 
+return true; 
+} 
+} 
