@@ -353,10 +353,10 @@ header {
   line-height: 160%;
 }
 .main section.page2{
-  background: url(images/zi1.png) no-repeat;
+  /*background: url(images/zi1.png) no-repeat;*/
   /*background-attachment:fixed;*/
-  background-position: center bottom;
-  background-size:406px 108px;
+  /*background-position: center bottom;*/
+  /*background-size:406px 108px;*/
 }
 .main section.page2 .zi2{
   background: url(images/zi2.png) no-repeat;
@@ -378,19 +378,19 @@ header {
   background: url(images/iphone1.png) no-repeat;
   /*background-attachment:fixed;*/
   background-position: center bottom;
-  background-size:300px 537px;
+  background-size:200px 358px;
 }
 .main section.page4{
   background: url(images/iphone2.png) no-repeat;
   background-position: center bottom;
   /*background-attachment: fixed;*/
-  background-size:300px 537px;
+  background-size:200px 358px;
 }
 .main section.page5{
   background: url(images/iphone3.png) no-repeat;
   background-position: center bottom;
   /*background-attachment: fixed;*/
-  background-size:300px 537px;
+  background-size:200px 358px;
 }
 body.disabled-onepage-scroll .onepage-wrapper  section {
   min-height: 100%;
