@@ -356,12 +356,12 @@ header {
   background: url(images/zi1.png) no-repeat;
   /*background-attachment:fixed;*/
   background-position: center bottom;
-  background-size:300px 117px;
+  background-size:406px 108px;
 }
 .main section.page2 .zi2{
   background: url(images/zi2.png) no-repeat;
   background-position: center top;
-  background-size:145px 204px;
+  background-size:145px 185px;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -369,19 +369,11 @@ header {
 .main section.page2 .zi2 .zi3{
   background: url(images/sec0-title.png) no-repeat;
   background-position: center center;
-  background-size:302px 249px;
+  background-size:302px 239px;
   width: 100%;
   height: 100%;
   position: absolute;
 }
-.main section.page2 .page_container {
-  margin-top: 240px;
-  overflow: hidden;
-}
-.viewing-page-2 .back{
-  background: rgba(0, 0, 0, 0.25);
-  color: #FFF;
-  }
 .main section.page3{
   background: url(images/iphone1.png) no-repeat;
   /*background-attachment:fixed;*/
