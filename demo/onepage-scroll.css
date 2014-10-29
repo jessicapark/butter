@@ -312,10 +312,14 @@ header {
 }
 .main section .page_container {
   position: relative;
-  top: 25%;
+  top: 5%;
   margin: 0 auto 0;
   max-width: 950px;
   z-index: 3;
+}
+.main section.page5 .page_container{
+  top: 50%;
+  margin-top: -250px;
 }
 .main section  {
   overflow: hidden;
@@ -347,15 +351,6 @@ header {
   text-align: center;
   width: 435px;
   line-height: 160%;
-}
-.main section .page_container .btns {
-  clear: both;
-  float: left;
-  text-align: center;
-  width: 435px;
-}
-.main section .page_container .btns a{
-  text-align: center;
 }
 .main section.page2 {
   /*background: url(images/iphone1.png) no-repeat center -150px;*/
@@ -389,39 +384,22 @@ header {
   color: #FFF;
   }
 .main section.page3{
-  background: url(images/iphone1.png) no-repeat center;
-  /*background-attachment: fixed;*/
+  background: url(images/iphone1.png) no-repeat;
+  /*background-attachment:fixed;*/
+  background-position: center bottom;
   background-size:300px 537px;
 }
 .main section.page4{
-  background: url(images/iphone2.png) no-repeat center;
+  background: url(images/iphone2.png) no-repeat;
+  background-position: center bottom;
   /*background-attachment: fixed;*/
   background-size:300px 537px;
 }
 .main section.page5{
-  background: url(images/iphone3.png) no-repeat center;
+  background: url(images/iphone3.png) no-repeat;
+  background-position: center bottom;
   /*background-attachment: fixed;*/
   background-size:300px 537px;
-}
-.main section.page3 .page_container {
-  overflow: hidden;
-  width: 500px;
-  right: -285px;
-}
-.main section.page3 h1 {
-  text-align: left;
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 70px;
-  letter-spacing: -1px;
-  color: black;
-}
-.main section.page3 h2 {
-  color: rgba(0,0,0,0.85);
-  text-align: left;
-  line-height: 160%;
-  font-weight: 100;
-  font-size: 21px;
 }
 body.disabled-onepage-scroll .onepage-wrapper  section {
   min-height: 100%;
