@@ -331,32 +331,11 @@ header {
   z-index: 1;
 }
 
-.main section.page1 {
-  /*background:rgb(230, 217, 200);*/
-}
-.main section.page1 h1 {
-  float: none;
-  width: 435px;
-  display: block;
-  text-align: center;
-  padding: 0;
-  margin-bottom: 15px;
-  font-size: 44px;
-  color: black;
-}
-.main section.page1 h2 {
-  font-size: 18px;
-  display: block;
-  color: rgba(0,0,0,0.85);
-  text-align: center;
-  width: 435px;
-  line-height: 160%;
-}
-.main section.page2{
-  /*background: url(images/zi1.png) no-repeat;*/
+.main section.page1{
+  background:#f8e981 url(images/logo.png) no-repeat;
   /*background-attachment:fixed;*/
-  /*background-position: center bottom;*/
-  /*background-size:406px 108px;*/
+  background-position: center center;
+  background-size:239px 290px;
 }
 .main section.page2 .zi2{
   background: url(images/zi2.png) no-repeat;
