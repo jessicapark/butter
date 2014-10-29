@@ -104,7 +104,7 @@ body {
   background: #fff;
   padding: 0;
   text-align: center;
-  color:#4a4a4a;
+  color:#767676;
   background: #fdf187;
   font-size: 13px;
   font-family: "athelas", Lora, "Times New Roman", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
@@ -446,18 +446,14 @@ display: block;
 #copyright {
 position: absolute;
 width: 122px;
-height: 83px;
+height: 37px;
 bottom: 20px;
 left: 50%;
 margin-left: -61px;
 }
 #copyright img{
   width: 122px;
-  height: 83px;
-}
-.more-info img{
-  width: 147px;
-  height: 47px;
+  height: 37px;
 }
 
 /****** scroll ********/
