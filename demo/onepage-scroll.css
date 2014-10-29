@@ -387,19 +387,19 @@ header {
   background: url(images/iphone1.png) no-repeat;
   /*background-attachment:fixed;*/
   background-position: center bottom;
-  background-size:200px 358px;
+  background-size:300px 537px;
 }
 .main section.page4{
   background: url(images/iphone2.png) no-repeat;
   background-position: center bottom;
   /*background-attachment: fixed;*/
-  background-size:200px 358px;
+  background-size:300px 537px;
 }
 .main section.page5{
   background: url(images/iphone3.png) no-repeat;
   background-position: center bottom;
   /*background-attachment: fixed;*/
-  background-size:200px 358px;
+  background-size:300px 537px;
 }
 body.disabled-onepage-scroll .onepage-wrapper  section {
   min-height: 100%;
