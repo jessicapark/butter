@@ -101,10 +101,14 @@ html {
   height: 100%;
 }
 body {
-  background: #E2E4E7;
+  background: #fff;
   padding: 0;
   text-align: center;
-  font-family: 'open sans';
+  color:#4a4a4a;
+  background: #fdf187;
+  font-size: 14px;
+  font-family: "athelas", Lora, "Times New Roman", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  line-height: 1.3;
   position: relative;
   margin: 0;
   height: 100%;
@@ -425,6 +429,32 @@ body.disabled-onepage-scroll .main section.page3 .page_container {
   margin-left: auto;
   margin-right: auto;
   right: 0;
+}
+.page7 .sec-title{
+  margin-top: 50px;
+}
+.page7 .tips{
+  font-size: 12px;
+}
+.page7 .sec-title a{
+margin: 40px auto;
+display: block;
+}
+#copyright {
+position: absolute;
+width: 122px;
+height: 83px;
+bottom: 30px;
+left: 50%;
+margin-left: -61px;
+}
+#copyright img{
+  width: 122px;
+  height: 83px;
+}
+.more-info img{
+  width: 147px;
+  height: 47px;
 }
 
 /****** scroll ********/
